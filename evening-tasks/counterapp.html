@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <section class="min_height display_flex justify_content text-align align-items bg_off_white">
+        <div class="container">
+            <h3 class="color_gray fs-2 mb_43 fw-normal">Counter app</h3>
+            <div class="bg_white shadow_one border_radius_20 width_460 height_228 width_height">
+                <p class="fs-2 color_black mt_57" id="count_value">0</p>
+                <button class="btn bg_white btn_counter" id="adding_btn">Add One</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let count_value = document.getElementById("count_value");
+        let adding_btn = document.getElementById("adding_btn");
+        adding_btn.addEventListener("click", function () {
+            count_value.innerHTML = +count_value.innerHTML + 1;
+        })
+    </script>
+
+</body>
+
+</html>

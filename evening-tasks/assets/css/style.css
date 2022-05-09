@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter',
+        sans-serif;
+}
+
+/*COMMON=============================CLASSES*/
+
+.min_height {
+    min-height: 100vh;
+}
+
+.display_flex {
+    display: flex;
+}
+
+.justify_content {
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
+/*BACKGROUND===============COLOR===============CLASS*/
+
+.bg_off_white {
+    background: #F7F7F7;
+}
+
+.bg_white {
+    background-color: #ffff;
+}
+
+.bg_gradient {
+    background: linear-gradient(127.28deg, #EBEBEB 12.53%, #FFFFFF 86.52%);
+}
+
+.bg_blue {
+    background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+}
+
+/*COLORS=========================CLASSES*/
+
+.color_gray {
+    color: #808080;
+}
+
+.color_black {
+    color: black;
+}
+
+.white {
+    color: white;
+}
+
+/*FONT================SIZES===================CLASSES*/
+.fs-1 {
+    font-size: 1rem;
+}
+
+.fs-2 {
+    font-size: 2.25rem;
+}
+
+/*FONT====================WEIGHT=============CLASSES*/
+.fw-normal {
+    font-weight: normal;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+/*BOX========SHADOW==============CLASSES===============START*/
+
+.shadow_one {
+    box-shadow: 0px 11px 44px -10px rgba(0, 0, 0, 0.25) !important;
+}
+
+/*BORDER==============RADIUS==================CLASSES====================START*/
+
+.border_radius_20 {
+    border-radius: 20px;
+}
+
+.border_radius_5 {
+    border-radius: 5px;
+}
+
+.border_radius_3 {
+    border-radius: 3px;
+}
+
+/*HEIGHT==============WIDTH==================CLASSES=============START*/
+
+.height_304 {
+    height: 304px;
+}
+
+.height_228 {
+    height: 228px;
+}
+
+.width_460 {
+    width: 460px;
+}
+
+.width_83 {
+    width: 83px;
+}
+
+.height_77 {
+    height: 77px;
+}
+
+.height_154 {
+    height: 154px;
+}
+
+/*MARGIN================CLASSES=============START*/
+
+.mt_57 {
+    padding-top: 57px;
+}
+
+.mt_36 {
+    margin-top: 36px;
+}
+
+.mt-14 {
+    margin-top: 14px;
+}
+
+.mb_43 {
+    margin-bottom: 2.7rem;
+}
+
+.mt_10 {
+    margin-top: 10px;
+}
+
+.mt_20 {
+    margin-top: 20px;
+}
+
+/*BUTTON==============CLASSES===============START*/
+.btn {
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer !important;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05) !important;
+}
+
+.btn_counter {
+    background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+    padding: 13px 40px;
+    color: white;
+    border: 0 none;
+    margin-top: 35px;
+}
+
+.btn_one {
+    color: #128DFF;
+    padding: 13px 40px;
+    border: 1px solid #128DFF;
+    margin-top: 35px;
+}
+
+.btn_two {
+    background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+    padding: 14px 53px;
+    color: white;
+    border: 0 none;
+    margin-top: 35px;
+}
+
+.btn_three {
+    background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+    border: 0 none;
+    padding: 15px 55px;
+}
+
+.btn_hover {
+    transition: all 0.4s ease-in-out;
+}
+
+.btn_hover:hover {
+    transform: scale(1.05);
+}
+
+/*OPACITY=======================CLASSES====================START*/
+
+.opacity {
+    opacity: 0.5;
+}
+
+/*EXTRA======================CLASSES=======================START*/
+
+.box_white {
+    padding: 19px 21px;
+}
+
+.total_box {
+    padding: 14px 18px;
+    height: 190px;
+}
+
+.border {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.outline {
+    outline: none !important;
+}
+
+.btn_border {
+    border: 1px solid #128DFF;
+    height: 50px;
+    width: 82px;
+}
+
+.border_none {
+    border: 0 none;
+}
+
+.padding_29_31 {
+    padding: 29px 31px;
+}
+
+@media (max-width:500px) {
+    .width_height {
+        width: 300px;
+        height: 200px;
+    }
+
+    .width_height_media {
+        width: 300px;
+    }
+
+    .fs-2 {
+        font-size: 30px !important;
+    }
+
+    .btn_one {
+        padding: 13px 20px;
+    }
+
+    .btn_two {
+        padding: 13px 35px;
+    }
+}
+
+@media (max-width:550px) {
+    .box_margin {
+        margin: 0 10px;
+    }
+
+    .btn_three {
+        margin-top: 10px;
+    }
+
+    .width_83 {
+        width: 50px;
+    }
+
+    .height_77 {
+        height: 50px;
+    }
+
+    .height_154 {
+        height: 100px;
+    }
+}
+
+@media (max-width:400px) {
+    .width_83 {
+        width: 42px;
+    }
+
+    .height_154 {
+        height: 95px;
+    }
+}

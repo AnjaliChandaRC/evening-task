@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Advance Calculator</title>
+</head>
+
+<body>
+    <!--ADVANCE================CALCULATOR=================SECTION==============START-->
+    <section class="min_height display_flex justify_content align-items bg_off_white">
+        <div class="container">
+            <h3 class="color_gray fs-2 mb_43 fw-normal text-align">Advance Calculator</h3>
+            <div class="bg_white shadow_one border_radius_20 display_flex box_white box_margin flex-direction">
+                <div class="total_box border_radius_5 bg_off_white border">
+                    <p class="fs-1 color_black fw-normal opacity" id="value_first"></p>
+                    <p class="color_black fs-1 opacity fw-normal mt_10" id="value_second"></p>
+                    <p class="color_black fs-1 opacity fw-normal mt_10" id="value_third"></p>
+                    <p class="color_black fs-2 fw-normal mt-14" id="value_fourth"></p>
+                </div>
+                <div class="display_flex">
+                    <div class="d-grid mt-14">
+                        <button class="border_radius_3 color_gray
+                                     border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="7">7</button>
+                        <button class="border_radius_3 color_gray
+                                     border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="4">4</button>
+                        <button class="border_radius_3 color_gray
+                                     border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="1">1</button>
+                        <button class="border_radius_3 color_gray
+                                     border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="00">00</button>
+                    </div>
+                    <div class="d-grid mt-14">
+                        <button
+                            class="border_radius_3 color_gray
+                                                     border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="8">8</button>
+                        <button
+                            class="border_radius_3 color_gray
+                                                     border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="5">5</button>
+                        <button
+                            class="border_radius_3 color_gray
+                                                     border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="2">2</button>
+                        <button class="border_radius_3 color_gray
+                                                  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="0">0</button>
+                    </div>
+                    <div class="d-grid mt-14">
+                        <button class="border_radius_3 color_gray
+                                                 border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="9">9</button>
+                        <button class="border_radius_3 color_gray
+                                                  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="6">6</button>
+                        <button class="border_radius_3 color_gray
+                                                  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="3">3</button>
+                        <button class="border_radius_3 color_gray
+                                                  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number=".">.</button>
+                    </div>
+                    <div class="d-grid mt-14">
+                        <button class="border_radius_3 color_gray
+                                                 border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="+">+</button>
+                        <button class="border_radius_3 color_gray
+                                                   border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="-">-</button>
+                        <button class="border_radius_3 color_gray
+                                                 border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="*">*</button>
+                        <button class="border_radius_3 color_gray
+                                                  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="/">/</button>
+                    </div>
+                    <div class="d-grid mt-14">
+                        <button
+                            class="border_radius_3 color_gray  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="^">^</button>
+                        <button
+                            class="border_radius_3 color_gray  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="1/x">1/x</button>
+                        <button
+                            class="border_radius_3 color_gray  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="%">%</button>
+                        <button
+                            class="border_radius_3 color_gray border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-number="!">!</button>
+                    </div>
+                    <div class="d-grid mt-14">
+                        <button
+                            class="border_radius_3 color_gray border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-delete="Delete"><img class="w-100" src="./assets/image/cross-btn.png" alt=""></button>
+                        <button
+                            class="border_radius_3 color_gray border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
+                            data-clear="clear">C</button>
+                        <button
+                            class="border_radius_3 bg_blue width_83 height_154 border_none white cursor_pointer btn_hover"
+                            data-value="=">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ADVANCE================CALCULATOR=================SECTION==============END-->
+
+    <script>
+        let percentage=document.getElementById("percentage");
+        let value_third = document.getElementById("value_third");
+        let value_second = document.getElementById("value_second");
+        let value_first = document.getElementById("value_first");
+        let value_fourth = document.getElementById("value_fourth");
+        let equal = document.querySelector('[data-value]');
+        const buttons = document.querySelectorAll('[data-number]');
+        let clr = document.querySelector('[data-clear]');
+        let del = document.querySelector('[data-delete]');
+        // buttons.forEach(function (button, index) {
+        //     button.addEventListener("click", () => {
+        //         value_fourth.innerHTML += button.dataset.number;
+        //     });
+        // });
+        // equal.addEventListener("click", () => {
+        //     value_third.innerHTML = value_second.innerHTML;
+        //     value_second.innerHTML = value_first.innerHTML;
+        //     value_first.innerHTML = value_fourth.innerHTML;
+        //     value_fourth.innerHTML = eval(value_fourth.innerHTML);
+        //     return;
+        // });
+        // del.addEventListener("click", () => {
+        //     value_fourth.innerHTML = value_fourth.innerHTML.slice(0, -1);
+        //     value_third.innerHTML = value_third.innerHTML.slice(0, -1);
+        //     value_second.innerHTML = value_second.innerHTML.slice(0, -1);
+        //     value_first.innerHTML = value_first.innerHTML.slice(0, -1);
+        //     // if (value_first.innerHTML == 0, value_second.innerHTML == 0, value_third.innerHTML == 0, value_fourth.innerHTML == 0) {
+        //     //     value_first.innerHTML = " ";
+        //     //     value_second.innerHTML = " ";
+        //     //     value_third.innerHTML = " ";
+        //     //     value_fourth.innerHTML = " ";
+        //     // };
+        // });
+        // clr.addEventListener("click", () => {
+        //     value_first.innerHTML = " ";
+        //     value_second.innerHTML = " ";
+        //     value_third.innerHTML = " ";
+        //     value_fourth.innerHTML = " ";
+        //     return;
+        // });
+
+        buttons.forEach(function (button) {
+            button.addEventListener("click", () => {
+                value_fourth.innerHTML += button.dataset.number;
+            });
+        });
+        const handleEqual = (current, prev_3, prev_2) => {
+            if (current.includes('^')) {
+                let numbers = current.split('^')
+                value_fourth.innerHTML = numbers[0] ** numbers[1];
+            }
+                // if (current.includes("%")){
+                //     let numbers = current.split("%")
+                //     value_fourth.innerHTML=numbers[0] % numbers[1];
+                // }
+            if (current == "") {
+                value_fourth.innerHTML = current;
+            }
+            if (current != '' && !current.includes('^')) {
+                value_fourth.innerHTML = eval(current);
+            }
+            // value_third.innerHTML = prev_2;
+            // value_second.innerHTML = prev_1;
+            // value_first.innerHTML = current;
+            value_first.innerHTML = prev_2;
+            value_second.innerHTML = prev_3;
+            value_third.innerHTML=current;
+        };
+        equal.addEventListener("click", () => {
+            handleEqual(value_fourth.innerHTML, value_third.innerHTML, value_second.innerHTML)
+        });
+        clr.addEventListener("click", () => {
+            handleEqual('', '', '');
+        });
+        del.addEventListener("click", () => {
+            value_fourth.innerHTML = value_fourth.innerHTML.slice(0, -1);
+            if (value_fourth.innerHTML == 0) {
+                value_fourth.innerHTML = " ";
+            };
+        });
+        // percentage.addEventListener=("click",function(a,b){
+        //     return(100 * a) / b;
+        // })
+    </script>
+</body>
+
+</html>

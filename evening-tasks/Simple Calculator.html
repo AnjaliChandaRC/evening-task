@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!--SIMPLE================CALCULATOR=================SECTION==============START-->
+    <section class="min_height display_flex justify_content align-items bg_off_white">
+        <div class="container">
+            <h3 class="color_gray fs-2 mb_43 fw-normal text-align">Simple Calculator</h3>
+            <div class="bg_white shadow_one border_radius_20 display_flex box_white box_margin flex-direction">
+                <div class="total_box border_radius_5 bg_off_white border">
+                    <p class="fs-1 color_black fw-normal opacity" id="value">....</p>
+                    <p class="color_black fs-2 fw-normal" id="calculation">....</p>
+                </div>
+                <input type="text"
+                    class="border_radius_5 bg_off_white color_gray input_box box_white mt_10 border outline"
+                    placeholder="Enter first value" id="first_value">
+                <input type="text"
+                    class="border_radius_5 bg_off_white color_gray input_box box_white mt_10 border outline"
+                    placeholder="Enter second value" id="second_value">
+                <div class="mt_20">
+                    <button class="btn_border border_radius_5 bg_white" id="addition">+</button>
+                    <button class="btn_border border_radius_5 bg_white" id="subtraction">-</button>
+                    <button class="btn_border border_radius_5 bg_white" id="multiply">*</button>
+                    <button class="btn_border border_radius_5 bg_white" id="division">/</button>
+                    <button class="btn white btn_three" id="clear">Clear</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SIMPLE================CALCULATOR=================SECTION================END-->
+
+    <script>
+        let value = document.getElementById("value");
+        let calculation = document.getElementById("calculation");
+        let first_value = document.getElementById("first_value");
+        let second_value = document.getElementById("second_value");
+
+        let buttons = [addition, subtraction, multiply, division, clear];
+        buttons.forEach(function (button, index) {
+            const sign = button.innerHTML;
+            button.addEventListener("click", function () {
+                if (index != 4) {
+                    if (isNaN(first_value.value) || isNaN(second_value.value)) {
+                        alert("Please enter only Number");
+                        first_value.value = "";
+                        second_value.value = "";
+                        return;
+                    }
+                    if (first_value.value == "" || second_value.value == "") {
+                        alert("Please enter complete value");
+                        first_value.value = "";
+                        second_value.value = "";
+                        return;
+                    }
+                    if (index = 3) {
+                        if (second_value.value == 0) {
+                            alert("Can't devided by zero please enter valid value");
+                            return;
+                        }
+                    }
+                    calculation.innerHTML = eval(+first_value.value + sign + second_value.value);
+                    value.innerHTML = +first_value.value + sign + second_value.value;
+                    first_value.value = "";
+                    second_value.value = "";
+                    return;
+                }
+                switch (index) {
+                    case 4:
+                        value.innerHTML = "&nbsp";
+                        calculation.innerHTML = " ";
+                        first_value.value = "";
+                        second_value.value = "";
+                        break;
+                }
+            });
+        });
+    </script>
+
+    <!-- 
+    // button.addEventListener("click", function () {
+    // if (isNaN(first_value.value) || isNaN(second_value.value)) {
+    // alert("Please enter only Number")
+    // value = "";
+    // calculation = "";
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // }
+    // if (first_value.value == "" || second_value.value == "") {
+    // alert("Please enter complete value");
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // }
+    // if (index == '0') {
+    // calculation.innerHTML = +first_value.value + +second_value.value;
+    // value.innerHTML = +first_value.value + " + " + second_value.value;
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // }
+    // if (index == '1') {
+    // calculation.innerHTML = first_value.value - second_value.value;
+    // value.innerHTML = +first_value.value + " - " + second_value.value;
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // }
+    // if (index == '2') {
+    // calculation.innerHTML = first_value.value * second_value.value;
+    // value.innerHTML = +first_value.value + " * " + second_value.value;
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // }
+    // if (index == '3') {
+    // calculation.innerHTML = first_value.value / second_value.value;
+    // value.innerHTML = +first_value.value + " / " + second_value.value;
+    // if ((first_value.value == 0) && (second_value.value == 0)) {
+    // alert("Can't devided zero please enter valid value");
+    // value = "";
+    // calculation = "";
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // }
+    // if (second_value.value == 0) {
+    // alert("not devided by zero")
+    // value = "";
+    // calculation = "";
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // }
+
+    // }
+    // })
+    // })
+
+    // clear.addEventListener("click", function () {
+    // value.innerHTML = "&nbsp";
+    // calculation.innerHTML = " ";
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // })
+
+    // addition.addEventListener("click", function () {
+    // if (isNaN(first_value.value) || isNaN(second_value.value)) {
+    // alert("Please enter only Number")
+    // value = "";
+    // calculation = "";
+    // }
+    // if (first_value.value == "" || second_value.value == "") {
+    // alert("Please enter complete value");
+    // return;
+    // }
+    // calculation.innerHTML = +first_value.value + +second_value.value;
+    // value.innerHTML = +first_value.value + " + " + second_value.value;
+    // first_value.value = "";
+    // second_value.value = "";
+    // })
+
+    // subtraction.addEventListener("click", function () {
+    // if (isNaN(first_value.value) || isNaN(second_value.value)) {
+    // alert("Please enter only Number")
+    // value = "";
+    // calculation = "";
+    // }
+    // if (first_value.value == "" || second_value.value == "") {
+    // alert("Please enter complete value");
+    // return;
+    // }
+    // calculation.innerHTML = first_value.value - second_value.value;
+    // value.innerHTML = +first_value.value + " - " + second_value.value;
+    // first_value.value = "";
+    // second_value.value = "";
+    // })
+
+    // multiply.addEventListener("click", function () {
+    // if (isNaN(first_value.value) || isNaN(second_value.value)) {
+    // alert("Please enter only Number")
+    // value = "";
+    // calculation = "";
+    // }
+    // if (first_value.value == "" || second_value.value == "") {
+    // alert("Please enter complete value");
+    // return;
+    // }
+    // calculation.innerHTML = first_value.value * second_value.value;
+    // value.innerHTML = +first_value.value + " * " + second_value.value;
+    // first_value.value = "";
+    // second_value.value = "";
+    // })
+
+    // division.addEventListener("click", function () {
+    // if (isNaN(first_value.value) || isNaN(second_value.value)) {
+    // alert("Please enter only Number")
+    // value = "";
+    // calculation = "";
+    // }
+    // if (first_value.value == "" || second_value.value == "") {
+    // alert("Please enter complete value");
+    // return;
+    // }
+    // if ((first_value.value == 0) && (second_value.value == 0)) {
+    // alert("Can't devided zero please enter valid value");
+    // return;
+    // }
+    // if (second_value.value == 0) {
+    // alert("not devided by zero")
+    // return;
+    // }
+    // calculation.innerHTML = first_value.value / second_value.value;
+    // value.innerHTML = +first_value.value + " / " + second_value.value;
+    // first_value.value = "";
+    // second_value.value = "";
+    // });
+    // clear.addEventListener("click", function () {
+    // value.innerHTML = "&nbsp";
+    // calculation.innerHTML ="&nbsp";
+    // first_value.value = "";
+    // second_value.value = "";
+    // return;
+    // }) -->
+
+    </script>
+</body>
+
+</html>
