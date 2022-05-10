@@ -88,13 +88,13 @@
                             data-number="^">^</button>
                         <button
                             class="border_radius_3 color_gray  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
-                            data-number="1/x">1/x</button>
+                            data-inverse="1/x">1/x</button>
                         <button
                             class="border_radius_3 color_gray  border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
                             data-number="%">%</button>
                         <button
                             class="border_radius_3 color_gray border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
-                            data-number="!">!</button>
+                            data-factorial="!">!</button>
                     </div>
                     <div class="d-grid mt-14">
                         <button
@@ -114,15 +114,18 @@
     <!--ADVANCE================CALCULATOR=================SECTION==============END-->
 
     <script>
-        let percentage=document.getElementById("percentage");
+        let percentage = document.getElementById("percentage");
         let value_third = document.getElementById("value_third");
         let value_second = document.getElementById("value_second");
         let value_first = document.getElementById("value_first");
         let value_fourth = document.getElementById("value_fourth");
+        let inverse = document.querySelector("[data-inverse]");
+        let factorial = document.querySelector("[data-factorial");
         let equal = document.querySelector('[data-value]');
         const buttons = document.querySelectorAll('[data-number]');
         let clr = document.querySelector('[data-clear]');
         let del = document.querySelector('[data-delete]');
+        let percnt = document.querySelector('[data-percentage]');
         // buttons.forEach(function (button, index) {
         //     button.addEventListener("click", () => {
         //         value_fourth.innerHTML += button.dataset.number;
@@ -154,6 +157,10 @@
         //     value_fourth.innerHTML = " ";
         //     return;
         // });
+        // percentage.addEventListener("click", () => {
+        //     total.innerHTML += button.dataset.number;
+        //     count.innerHTML = math.pow(total.innerHTML)
+        // });
 
         buttons.forEach(function (button) {
             button.addEventListener("click", () => {
@@ -165,23 +172,24 @@
                 let numbers = current.split('^')
                 value_fourth.innerHTML = numbers[0] ** numbers[1];
             }
-                // if (current.includes("%")){
-                //     let numbers = current.split("%")
-                //     value_fourth.innerHTML=numbers[0] % numbers[1];
-                // }
+            if (current.includes("%")) {
+                let numbers = current.split("%");
+                value_fourth.innerHTML = (+numbers[0] / +numbers[1]) * 100;
+                return;
+            }
             if (current == "") {
                 value_fourth.innerHTML = current;
             }
             if (current != '' && !current.includes('^')) {
                 value_fourth.innerHTML = eval(current);
             }
-            // value_third.innerHTML = prev_2;
-            // value_second.innerHTML = prev_1;
-            // value_first.innerHTML = current;
             value_first.innerHTML = prev_2;
             value_second.innerHTML = prev_3;
-            value_third.innerHTML=current;
+            value_third.innerHTML = current;
         };
+        inverse.addEventListener("click", () => {
+            value_fourth.innerHTML = 1 / value_fourth.innerHTML;
+        })
         equal.addEventListener("click", () => {
             handleEqual(value_fourth.innerHTML, value_third.innerHTML, value_second.innerHTML)
         });
@@ -194,9 +202,21 @@
                 value_fourth.innerHTML = " ";
             };
         });
-        // percentage.addEventListener=("click",function(a,b){
-        //     return(100 * a) / b;
-        // })
+        factorial.addEventListener("click", (calculateFactorial))
+        const calculateFactorial = (value) => {
+            let values = [];
+            let result = 1;
+
+            for (value; value >= 1; value--) {
+                values.push(value)
+            }
+
+            for (val of values) {
+                result = result * val
+            }
+            return result;
+            // console.log("sdfdsf");
+        }
     </script>
 </body>
 

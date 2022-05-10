@@ -1,0 +1,9 @@
+{
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "diffEditor.wordWrap": "on",
+    "editor.wordWrap": "on"
+}
