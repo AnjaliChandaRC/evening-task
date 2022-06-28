@@ -99,7 +99,9 @@
                     <div class="d-grid mt-14">
                         <button
                             class="border_radius_3 color_gray border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
-                            data-delete="Delete"><img class="w-100" src="./assets/image/cross-btn.png" alt=""></button>
+                            data-delete="Delete">
+                            <div><img src="./assets/image/cross-btn.png" alt=""></div>
+                        </button>
                         <button
                             class="border_radius_3 color_gray border_none bg_gradient width_83 height_77 cursor_pointer btn_hover"
                             data-clear="clear">C</button>
@@ -119,13 +121,13 @@
         let value_second = document.getElementById("value_second");
         let value_first = document.getElementById("value_first");
         let value_fourth = document.getElementById("value_fourth");
+        const buttons = document.querySelectorAll('[data-number]');
         let inverse = document.querySelector("[data-inverse]");
         let factorial = document.querySelector("[data-factorial");
         let equal = document.querySelector('[data-value]');
-        const buttons = document.querySelectorAll('[data-number]');
         let clr = document.querySelector('[data-clear]');
         let del = document.querySelector('[data-delete]');
-        let percnt = document.querySelector('[data-percentage]');
+        // let percnt = document.querySelector('[data-percentage]');
         // buttons.forEach(function (button, index) {
         //     button.addEventListener("click", () => {
         //         value_fourth.innerHTML += button.dataset.number;

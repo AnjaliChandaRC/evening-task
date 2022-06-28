@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="bg_off_white">
+        <div class="container min_height display_flex flex-direction">
+            <div class="m_auto">
+                <h3 class="color_gray fs-2 mb_43 fw-normal text-align">
+                    Sidebar</h3>
+                <div>
+                    <button class="btn btn_three white padding_t_r" onclick="OpenSidebar()">Open Sidebar</button>
+                </div>
+            </div>
+            <div id="overlay">
+            </div>
+            <div class="bg_white shadow_one nav_radius padding_29_31 h-100" id="sidebar">
+                <div class="text-align-end">
+                    <img class=" cursor_pointer" onclick="CloseSidebar()" src="./assets/image/cross-nav.png" alt="">
+                </div>
+                <p class="fs-1 fw-semibold color_black mt_57">Sidebar</p>
+                <div class="d-grid">
+                    <button
+                        class="fs-1 fw-semibold white btn color-blue padding_13_93 mt_36 bg_white border_clr nav_btn">Link
+                        1</button>
+                    <button
+                        class="fs-1 fw-semibold white btn color-blue padding_13_93 mt_6 bg_white border_clr nav_btn">Link
+                        2</button>
+                    <button
+                        class="fs-1 fw-semibold white btn color-blue padding_13_93 mt_6 bg_white border_clr nav_btn">Link
+                        3</button>
+                    <button
+                        class="fs-1 fw-semibold white btn color-blue padding_13_93 mt_6 bg_white border_clr nav_btn">Link
+                        4</button>
+                    <button
+                        class="fs-1 fw-semibold white btn color-blue padding_13_93 mt_6 bg_white border_clr nav_btn">Link
+                        5</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const Sidebar = document.getElementById("sidebar");
+
+        function OpenSidebar() {
+            Sidebar.classList.add("left-0");
+        }
+
+        function CloseSidebar() {
+            Sidebar.classList.remove("left-0");
+        }
+    </script>
+</body>
+
+</html>

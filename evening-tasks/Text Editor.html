@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="min_height display_flex justify_content align-items bg_off_white">
+        <div class="container">
+            <h3 id="heading" class="color_gray fs-2 mb_43 fw-normal text-align">Text Editor</h3>
+            <div
+                class="bg_white shadow_one border_radius_20 display_flex box_white box_margin flex-direction width_542">
+                <h4 id="changetext" class="color_black mt_36 fs-2 mb_43 fw-normal text-align">This changetext text.</h4>
+                <select data-type="color" class="select_border box_white color_gray border_radius_5 border">
+                    <option value="black">Select color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+                <select data-type="fontSize" class="select_border box_white color_gray border_radius_5 border mt_6">
+                    <option>Select font size</option>
+                    <option value="10px">10</option>
+                    <option value="20px">20</option>
+                    <option value="30px">30</option>
+                </select>
+                <select data-type="fontFamily" class="select_border box_white color_gray border_radius_5 border mt_6">
+                    <option>Select font family</option>
+                    <option value="Forte">Forte</option>
+                    <option value="Cooper">Cooper</option>
+                </select>
+                <select data-type="textAlign" class="select_border box_white color_gray border_radius_5 border mt_6">
+                    <option class="">Select text alignment</option>
+                    <option value="right">right</option>
+                    <option value="left">left</option>
+                    <option value="center">center</option>
+                </select>
+                <select data-type="fontWeight" class="select_border box_white color_gray border_radius_5 border mt_6">
+                    <option class="">Select font weight</option>
+                    <option value="400">400</option>
+                    <option value="900 ">900</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let changetext = document.getElementById("changetext");
+        let selects = document.querySelectorAll('[data-type]');
+
+        selects.forEach((select) => {
+            select.addEventListener("change", (e) => {
+                changetext.style[select.dataset.type] = e.target.value;
+            })
+
+        });
+
+
+
+
+        // // SELECT COLORS
+        // function colorChange() {
+        //     var c = document.getElementById("slct_clr");
+        //     var color = c.options[c.selectedIndex].value;
+        //     changetext.style.color = color;
+        // }
+
+        // // SELECT FONT SIZE
+        // function ffamily() {
+        //     var c = document.getElementById("slct_ff");
+        //     var family = c.options[c.selectedIndex].value;
+        //     changetext.style.family = family;
+        // }
+
+        // // ALIGNMENT
+        // function alignment() {
+        //     var c = document.getElementById("slct_td");
+        //     var alignment = c.options[c.selectedIndex].value;
+        //     changetext.style.alignment = alignment;
+        // }
+
+        // // SELECT TEXT ALIGNMENT
+        // function selectalignment() {
+        //     var a = document.getElementById("select_align");
+        //     var align = a.options[a.selectedIndex].value;
+        //     sample.style.textAlign = align;
+        // }
+    </script>
+
+
+    <!-- <h3 id="heading" class="color_gray fs-2 mb_43 fw-normal text-align">Text Editor</h3>
+
+    <script>
+        const div = document.createElement('div');
+        div.innerText = 'This Is Main Heading';
+        div.style.fontSize = '30px';
+        div.style.color = 'red';
+        div.style.fontWeight = '500';
+        heading.append(div);
+    </script> -->
+
+    <!-- <p id="count" class="fs_2 grey_color fw_1 opacity_1 mt_1 text_start">This is paragraph</p>
+    <script>
+        const div = document.createElement('div');
+        div.innerText = 'create element in javascript';
+        div.style.fontSize = '45px';
+        div.style.color = 'red';
+        count.append(div);
+    </script> -->
+
+</body>
+
+</html>

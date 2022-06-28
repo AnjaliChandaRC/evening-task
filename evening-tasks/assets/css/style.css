@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter',
+        sans-serif;
+}
+
+.ff-roboto {
+    font-family: 'Roboto',
         sans-serif;
 }
 
@@ -22,12 +28,25 @@
     justify-content: center;
 }
 
+.justify_content_between {
+    justify-content: space-between;
+}
+
 .align-items {
     align-items: center;
 }
 
 .text-align {
     text-align: center;
+}
+
+.text-end {
+    /* text-align: end; */
+    margin: end;
+}
+
+.text-align-end {
+    text-align: end;
 }
 
 .flex-direction {
@@ -40,6 +59,26 @@
 
 .cursor_pointer {
     cursor: pointer;
+}
+
+.h-100 {
+    min-height: 100vh;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
 }
 
 /*BACKGROUND===============COLOR===============CLASS*/
@@ -72,6 +111,10 @@
 
 .white {
     color: white;
+}
+
+.color-blue {
+    color: #1444EF;
 }
 
 /*FONT================SIZES===================CLASSES*/
@@ -112,10 +155,22 @@
     border-radius: 3px;
 }
 
+.border_none {
+    border: none;
+}
+
+.border_clr {
+    border-color: rgb(61, 61, 232);
+}
+
 /*HEIGHT==============WIDTH==================CLASSES=============START*/
 
 .height_304 {
     height: 304px;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 .height_228 {
@@ -124,6 +179,10 @@
 
 .width_460 {
     width: 460px;
+}
+
+.width_542 {
+    width: 542px;
 }
 
 .width_83 {
@@ -136,6 +195,27 @@
 
 .height_154 {
     height: 154px;
+}
+
+.height_fit_content {
+    height: fit-content !important;
+}
+
+.height_466 {
+    height: 466px;
+    overflow: auto;
+}
+
+.height_501 {
+    height: 501px;
+}
+
+.width_350 {
+    width: 350px;
+}
+
+.height_40 {
+    height: 40px;
 }
 
 /*MARGIN================CLASSES=============START*/
@@ -163,6 +243,18 @@
 .mt_20 {
     margin-top: 20px;
 }
+
+.mt_6 {
+    margin-top: 6px !important;
+}
+
+.m_auto {
+    margin: auto;
+}
+
+/* .mt_0 {
+    margin: 0 !important;
+} */
 
 /*BUTTON==============CLASSES===============START*/
 .btn {
@@ -214,6 +306,11 @@
     transform: scale(1.05);
 }
 
+.nav_btn:hover {
+    background-color: #1444EF;
+    color: white;
+}
+
 /*OPACITY=======================CLASSES====================START*/
 
 .opacity {
@@ -223,7 +320,31 @@
 /*EXTRA======================CLASSES=======================START*/
 
 .box_white {
-    padding: 19px 21px;
+    padding: 19px 20px;
+}
+
+.padding_t_r_l {
+    padding: 15px 20px 0px 15px;
+}
+
+.padding_t_r {
+    padding: 13px 35px;
+}
+
+.padding_22_19 {
+    padding: 30px 20px;
+}
+
+.padding_15_35 {
+    padding: 13px 34px;
+}
+
+.margin {
+    margin: 7px 5px;
+}
+
+.padding_13_93 {
+    padding: 13px 93px;
 }
 
 .total_box {
@@ -249,8 +370,77 @@
     border: 0 none;
 }
 
+.focus_visible {
+    outline: none !important;
+}
+
 .padding_29_31 {
     padding: 29px 31px;
+}
+
+.padding_22-19 {
+    padding: 22px 19px;
+}
+
+.task_shodow {
+    transition: all 0.4s ease-in-out;
+}
+
+.task_shodow:hover {
+    box-shadow: 0px 5px 17px rgba(0, 0, 0, 0.1);
+}
+
+.select_border {
+    padding-left: 11px;
+}
+
+.select_border:hover {
+    background-color: #128dff4c;
+    color: black;
+}
+
+.margin_left {
+    margin-right: 10px;
+}
+
+.cross_line {
+    text-decoration: line-through;
+}
+
+.accordion_border {
+    border: 1px solid #c5b4b4;
+}
+
+.accordion .description {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.accordion.active .description {
+    max-height: unset;
+    margin-bottom: 20px;
+}
+
+.accordion.active .accordion_icon {
+    transform: rotate(180deg);
+}
+
+.stanza {
+    display: none;
+}
+
+.nav_radius {
+    border-radius: 0px 16px 16px 0px;
+}
+
+.left-0 {
+    left: 0px !important;
+}
+
+#sidebar {
+    position: fixed;
+    left: -300px;
+    transition: all 0.3s ease-in-out;
 }
 
 @media (max-width:500px) {
@@ -295,6 +485,10 @@
 
     .height_154 {
         height: 100px;
+    }
+
+    .width_542 {
+        width: 300px;
     }
 }
 

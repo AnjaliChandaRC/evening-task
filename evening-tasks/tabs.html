@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Tabs</title>
+</head>
+
+<body>
+    <section class="min_height display_flex justify_content align-items bg_off_white">
+        <div class="container">
+            <h3 class="color_gray fs-2 mb_43 fw-normal text-align">Tabs</h3>
+            <div
+                class="bg_white shadow_one border_radius_20 display_flex box_white box_margin flex-direction width_542 height_466">
+                <div class="main_tabs">
+                    <div>
+                        <button onclick="showpara(0)" class="border_none tabs">Tab-1</button>
+                        <button onclick="showpara(1)" class="border_none tabs">Tab-2</button>
+                        <button onclick="showpara(2)" class="border_none tabs">Tab-3</button>
+                    </div>
+                    <p class="stanza color_gray fs-1 fw-normal mt_20">Massa, at est sit laoreet. Pellentesque sed
+                        habitasse nulla leo arcu quam. Tincidunt magnis dis
+                        odio at. Viverra a, id amet massa metus eros. Sed donec scelerisque id neque, mauris id
+                        ultricies auctor dui. Auctor maecenas scelerisque eu orci viverra volutpat. In dui justo, metus
+                        dolor. Mauris nibh at diam ipsum sollicitudin lacus. Orci, egestas porta nulla sed. Arcu mauris
+                        id bibendum habitant hendrerit semper vel.
+                        Massa, at est sit laoreet. Pellentesque sed habitasse nulla leo arcu quam. Tincidunt magnis dis
+                        odio at. Viverra a, id amet massa metus eros. Sed donec scelerisque id neque, mauris id
+                        ultricies auctor dui. Auctor maecenas scelerisque eu orci viverra volutpat. In dui justo, metus
+                        dolor. Mauris nibh at diam ipsum sollicitudin lacus. Orci, egestas porta nulla sed. Arcu mauris
+                        id bibendum habitant hendrerit semper vel.
+                    </p>
+                    <p class="stanza color_gray fs-1 fw-normal mt_20">Massa, at est sit laoreet. Pellentesque sed
+                        habitasse
+                        nulla leo arcu quam. Tincidunt magnis dis
+                        odio at. Viverra a, id amet massa metus eros. Sed donec scelerisque id neque, mauris id
+                        ultricies auctor dui. Auctor maecenas scelerisque eu orci viverra volutpat. In dui justo, metus
+                        dolor. Mauris nibh at diam ipsum sollicitudin lacus. Orci, egestas porta nulla sed. Arcu mauris
+                        id bibendum habitant hendrerit semper vel.
+                        Massa, at est sit laoreet. Pellentesque sed habitasse nulla leo arcu quam. Tincidunt magnis dis
+                        odio</p>
+                    <p class="stanza color_gray fs-1 fw-normal mt_20">Massa, at est sit laoreet. Pellentesque sed
+                        habitasse
+                        nulla leo arcu quam. Tincidunt magnis
+                        dis odio at. Viverra a, id amet massa metus eros. Sed donec scelerisque id neque, mauris id
+                        ultricies auctor dui. Auctor maecenas scelerisque eu orci viverra volutpat. In dui justo,
+                        metus dolor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const buttons = document.querySelectorAll(".main_tabs button");
+        const stanza = document.querySelectorAll(".stanza");
+        const Tabs = document.querySelectorAll(".tabs");
+
+
+        function showpara(e) {
+            stanza.forEach(function (node) {
+                node.style.display = "none";
+            })
+            Tabs.forEach(function (node) {
+                node.style.borderBottom = "none";
+            })
+            stanza[e].style.display = "block";
+            Tabs[e].style.borderBottom = "1px solid blue";
+        }
+        showpara(0);
+    </script>
+</body>
+
+</html>

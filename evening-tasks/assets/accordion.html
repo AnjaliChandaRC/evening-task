@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Accordion</title>
+</head>
+
+<body>
+    <section class="min_height display_flex justify_content align-items bg_off_white">
+        <div class="container">
+            <h3 class="color_gray fs-2 mb_43 fw-normal text-align">Accordian</h3>
+            <div
+                class="bg_white shadow_one border_radius_20 display_flex box_white box_margin flex-direction width_542 height_fit_content">
+                <div
+                    class="border_radius_5 bg_white shadow_one accordion padding_t_r_l accordion_border cursor_pointer">
+                    <div id="main_parent" class="display_flex justify_content_between">
+                        <p>Group-1</p>
+                        <div>
+                            <img class="accordion_icon" src="./image/accordion-icon.png" alt="accordion-icon">
+                        </div>
+                    </div>
+                    <p class="fs-1 color_gray fw-normal mt_20 description">Nibh dictum nulla morbi ornare. Varius sit at
+                        eget nunc.
+                        Nibh
+                        dictum
+                        nulla morbi
+                        ornare. Varius
+                        sit at eget nunc. Nibh dictum nulla morbi ornare. Varius sit at eget nunc.</p>
+                </div>
+                <div
+                    class="border_radius_5 bg_white shadow_one  mt_10  accordion  accordion_border padding_t_r_l cursor_pointer">
+                    <div id="main_parent" class="display_flex justify_content_between">
+                        <p>Group-1</p>
+                        <div>
+                            <img class="accordion_icon" src="./image/accordion-icon.png" alt="accordion-icon">
+                        </div>
+                    </div>
+                    <p class="fs-1 color_gray fw-normal mt_20 description">Nibh dictum nulla morbi ornare. Varius sit at
+                        eget nunc.
+                        Nibh
+                        dictum
+                        nulla morbi
+                        ornare. Varius
+                        sit at eget nunc. Nibh dictum nulla morbi ornare. Varius sit at eget nunc.</p>
+                </div>
+                <div
+                    class="border_radius_5 bg_white shadow_one  mt_10  accordion  accordion_border padding_t_r_l cursor_pointer">
+                    <div id="main_parent" class="display_flex justify_content_between">
+                        <p>Group-1</p>
+                        <div>
+                            <img class="accordion_icon" src="./image/accordion-icon.png" alt="accordion-icon">
+                        </div>
+                    </div>
+                    <p class="fs-1 color_gray fw-normal mt_20 description">Nibh dictum nulla morbi ornare. Varius sit at
+                        eget
+                        nunc.
+                        Nibh
+                        dictum
+                        nulla morbi
+                        ornare. Varius
+                        sit at eget nunc. Nibh dictum nulla morbi ornare. Varius sit at eget nunc.</p>
+                </div>
+                <div
+                    class="border_radius_5 bg_white shadow_one  mt_10  accordion  accordion_border padding_t_r_l cursor_pointer">
+                    <div id="main_parent" class="display_flex justify_content_between">
+                        <p>Group-1</p>
+                        <div>
+                            <img class="accordion_icon" src="./image/accordion-icon.png" alt="accordion-icon">
+                        </div>
+                    </div>
+                    <p class="fs-1 color_gray fw-normal mt_20 description">Nibh dictum nulla morbi ornare. Varius sit at
+                        eget
+                        nunc.
+                        Nibh
+                        dictum
+                        nulla morbi
+                        ornare. Varius
+                        sit at eget nunc. Nibh dictum nulla morbi ornare. Varius sit at eget nunc.</p>
+                </div>
+                <div
+                    class="border_radius_5 bg_white shadow_one  mt_10  accordion  accordion_border padding_t_r_l cursor_pointer">
+                    <div id="main_parent" class="display_flex justify_content_between">
+                        <p>Group-1</p>
+                        <div>
+                            <img class="accordion_icon" src="./image/accordion-icon.png" alt="accordion-icon">
+                        </div>
+                    </div>
+                    <p class="fs-1 color_gray fw-normal mt_20 description">Nibh dictum nulla morbi ornare. Varius sit at
+                        eget
+                        nunc.
+                        Nibh
+                        dictum
+                        nulla morbi
+                        ornare. Varius
+                        sit at eget nunc. Nibh dictum nulla morbi ornare. Varius sit at eget nunc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const accordions = document.querySelectorAll("#main_parent");
+        accordions.forEach((main_parent) => {
+            main_parent.addEventListener("click", () => {
+                const activeElement = document.querySelector(".accordion.active");
+                main_parent.parentElement.classList.toggle("active");
+                activeElement.classList.remove("active");
+            })
+        })
+    </script>
+</body>
+
+</html>
